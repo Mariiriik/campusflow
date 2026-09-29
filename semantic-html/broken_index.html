@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Каталог — CampusFlow</title>
+  </head>
+  <body>
+    <a href="#main-content">Перейти к основному содержимому</a>
+
+    <header>
+      <h1>CampusFlow</h1>
+      <nav aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Каталог</a></li>
+          <li><a href="my-events.html">Мои события</a></li>
+          <li><a href="profile.html">Профиль</a></li>
+        </ul>
+      </nav>
+      <form role="search">
+        <label for="header-search">Поиск</label>
+        <input id="header-search" type="search" placeholder="Поиск..." />
+      </form>
+      <p>AV</p>
+    </header>
+
+    <main id="main-content">
+      <h1>Учебные мероприятия</h1>
+      <h1>Найдите лекцию, мастер-класс или встречу по интересам.</h1>
+
+      <form role="search" aria-label="Поиск мероприятий">
+        <label for="event-search">Поиск по названию или теме</label>
+        <input
+          id="event-search"
+          type="search"
+          placeholder="Поиск по названию или теме..."
+        />
+
+        <label for="sort">Сортировка</label>
+        <select id="sort" name="sort">
+          <option value="newest">Сначала новые</option>
+        </select>
+
+        <button type="button">Сбросить</button>
+      </form>
+
+      <fieldset>
+        <legend>Фильтры</legend>
+        <button type="button" aria-pressed="true">Все</button>
+        <button type="button" aria-pressed="false">Frontend</button>
+      </fieldset>
+
+      <p>24 события</p>
+
+      <section aria-labelledby="events-heading">
+        <h2 id="events-heading">Список мероприятий</h2>
+
+        <ul>
+          <li>
+            <article>
+              <h3>Семантический HTML</h3>
+              <p>Frontend</p>
+              <p>
+                <time datetime="2026-09-18T16:00">18 сен 16:00</time> ауд. 304
+              </p>
+              <p>18 мест</p>
+              <img src="assets/images/miigaik.jpg" />
+              <button type="button" aria-label="Добавить в избранное">O</button>
+              <a href="event.html">
+                <button>Открыть карточку</button>
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Git без страха</h3>
+              <p>Инструменты</p>
+              <div onclick="alert('клик')">Кнопка через div</div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <aside aria-label="Мои фильтры">
+        <h2>Мои фильтры</h2>
+        <form>
+          <label for="date-filter">Дата</label>
+          <select id="date-filter" name="date">
+            <option value="week">На этой неделе</option>
+          </select>
+
+          <fieldset>
+            <legend>Формат</legend>
+            <label
+              ><input type="checkbox" name="format" value="offline" checked />
+              Очно</label
+            >
+            <label
+              ><input type="checkbox" name="format" value="online" />
+              Онлайн</label
+            >
+          </fieldset>
+
+          <button type="submit">Применить</button>
+        </form>
+      </aside>
+    </main>
+  </body>
+  <footer>
+    <p>Учебный проект CampusFlow</p>
+  </footer>
+</html>
